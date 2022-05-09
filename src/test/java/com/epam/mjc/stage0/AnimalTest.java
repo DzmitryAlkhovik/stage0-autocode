@@ -11,11 +11,9 @@ import java.util.Arrays;
 
 public class AnimalTest {
 
-    private static final String FILE_PATH = "com.epam.mjc.stage0.";
-
     @Test
     public void classAnimalExists() {
-        Assertions.assertDoesNotThrow(() -> Class.forName(FILE_PATH + "Animal"), "Class Animal does not exist.");
+        Assertions.assertDoesNotThrow(() -> Class.forName("com.epam.mjc.stage0.Animal"), "Class Animal does not exist.");
     }
 
     @Test
@@ -58,11 +56,8 @@ public class AnimalTest {
 
         try {
             Field colorField = Animal.class.getDeclaredField("color");
-            colorField.setAccessible(true);
             Field numberOfPawsField = Animal.class.getDeclaredField("numberOfPaws");
-            colorField.setAccessible(true);
             Field hasFurField = Animal.class.getDeclaredField("hasFur");
-            colorField.setAccessible(true);
 
             Animal animal = new Animal("someColor", 123123, true);
             Assertions.assertEquals("someColor", (String) colorField.get(animal), "Not correct set up for color field.");

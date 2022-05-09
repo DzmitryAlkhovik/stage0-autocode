@@ -1,6 +1,7 @@
 package com.epam.mjc.stage0;
 
 /**
+ * Task 1
  * 1. Create class Animal.
  * 2. Provide it with 3 private fields - color(String), numberOfPaws(int), hasFur(boolean).
  * 3. Add constructor with full parameters.
